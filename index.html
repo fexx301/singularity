@@ -122,6 +122,7 @@ body.locked .dots{opacity:0;pointer-events:none}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
 @media (max-width:720px){
   .hud.tc{display:none}.hud.bl div{min-width:190px}.hud.br{display:none}.dots{display:none}
+  .hero .inner>span{display:none}.hero .inner{justify-content:center}
   h2{font-size:clamp(46px,17vw,120px)}
   .snd span.t{display:none}
 }
@@ -458,6 +459,7 @@ vec3 aces(vec3 x){ return clamp((x*(2.51*x+.03))/(x*(2.43*x+.59)+.14), 0., 1.); 
 void main(){
   vec2 uv = (gl_FragCoord.xy - .5*uRes)/uRes.y;
   uv = shock(uv);
+  uv /= min(1., uRes.x/uRes.y*1.1);   // portrait screens: widen the field of view so scenes fit the width
   float s = clamp(uScene, 0., 4.);
   float i0 = min(floor(s), 4.);
   float f = s - i0;
@@ -834,7 +836,12 @@ $('#goSilent').addEventListener('click', () => begin(false));
    MAIN LOOP
    ===================================================================== */
 resize();
-addEventListener('resize', resize);
+let lastW = innerWidth, lastH = innerHeight;
+addEventListener('resize', () => {
+  // mobile browsers fire resize as the address bar collapses — ignore small height-only changes
+  if (innerWidth === lastW && Math.abs(innerHeight - lastH) < lastH*.25) return;
+  lastW = innerWidth; lastH = innerHeight; resize();
+});
 scrollTo(0, 0);
 $('#load').textContent = 'GRAVITY CALIBRATED — READY';
 
