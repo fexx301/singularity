@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>SINGULARITY — a one-file universe</title>
+<title>SINGULARITY: a one-file universe</title>
 <meta name="theme-color" content="#000000">
 <style>
 :root{
@@ -136,65 +136,65 @@ body.locked .dots{opacity:0;pointer-events:none}
 
 <div id="world">
   <section class="sec hero" data-i="0"><div class="inner">
-    <span>A one-file universe<br>WebGL2 · WebAudio · 0 dependencies</span>
+    <span>A one-file universe<br>WebGL2 · WebAudio</span>
     <div class="cue"><span>Scroll to fall</span><i></i></div>
-    <span style="text-align:right">Est. 2026<br>Sector ⟨ 0, 0, 0 ⟩</span>
+    <span style="text-align:right">No video<br>No libraries</span>
   </div><h1 class="sr">SINGULARITY</h1></section>
 
   <section class="sec left c0" data-i="1"><div class="num">01</div><div class="inner">
-    <div class="tag">Chapter 01 — Drift</div>
+    <div class="tag">01 / Drift</div>
     <h2 data-f="DRIFT">DRIFT</h2>
-    <p class="lede">Everything you know is a <b>rounding error</b>. Ten thousand suns passed while you were reading this sentence. You are already falling — you just haven't noticed yet.</p>
-    <div class="chips"><span class="chip">moving mouse = looking</span><span class="chip">scroll = falling</span></div>
+    <p class="lede">Ten thousand suns went by while you read this. <b>You are already falling.</b> The stars streaking past are 3D points, not an animation, and they speed up when you scroll faster.</p>
+    <div class="chips"><span class="chip">mouse: look around</span><span class="chip">scroll: fall</span></div>
   </div></section>
 
   <section class="sec right c1" data-i="2"><div class="num">02</div><div class="inner">
-    <div class="tag">Chapter 02 — Horizon</div>
+    <div class="tag">02 / Horizon</div>
     <h2 data-f="HORIZON">HORIZON</h2>
-    <p class="lede">Every ray on your screen is being <b>integrated through curved spacetime</b>, live, per pixel. Light itself cannot leave from here. <b>Neither can you.</b></p>
-    <div class="chips"><span class="chip">r<sub>s</sub> = 1.00</span><span class="chip">photon sphere 1.5 r<sub>s</sub></span><span class="chip">click to ripple spacetime</span></div>
+    <p class="lede">Every pixel here is a light ray <b>bent by gravity</b>, solved live on your GPU. The dark disc in the middle is where the rays never come back. The bright arcs above and below are the far side of the disk, warped into view.</p>
+    <div class="chips"><span class="chip">r<sub>s</sub> = 1.00</span><span class="chip">photon sphere 1.5 r<sub>s</sub></span><span class="chip">click: ripple spacetime</span></div>
   </div></section>
 
   <section class="sec left c2" data-i="3"><div class="num">03</div><div class="inner">
-    <div class="tag">Chapter 03 — Fold</div>
+    <div class="tag">03 / Fold</div>
     <h2 data-f="FOLD">FOLD</h2>
-    <p class="lede">Inside, geometry has <b>no bottom</b>. A 3D fractal, ray-marched in real time, breathing between powers as the universe folds over itself. Drag your cursor to orbit it.</p>
+    <p class="lede">A fractal with <b>no bottom</b>. Zoom in and there is always more detail. The shape is slowly changing its exponent between 6 and 9 while you watch. Move the cursor to walk around it.</p>
     <div class="chips"><span class="chip">mandelbulb · n = 6 → 9</span><span class="chip">distance estimated</span></div>
   </div></section>
 
   <section class="sec center c3" data-i="4"><div class="num">04</div><div class="inner">
-    <div class="tag">Chapter 04 — Echo</div>
+    <div class="tag">04 / Echo</div>
     <h2 data-f="ECHO">ECHO</h2>
-    <p class="lede">Move. The universe is <b>listening</b>. Turn the sound on and it answers — every note you hear is generated live, and it reshapes what you see.</p>
-    <div class="chips"><span class="chip">kaleidoscopic IFS</span><span class="chip">audio-reactive</span><span class="chip">press M for sound</span></div>
+    <p class="lede">Seven mirrors, folded over and over. Turn the sound on and it <b>answers you</b>. Every note is synthesized in your browser as you hear it, and the picture pulses with the notes.</p>
+    <div class="chips"><span class="chip">kaleidoscopic IFS</span><span class="chip">audio-reactive</span><span class="chip">M: sound on/off</span></div>
   </div></section>
 
   <section class="sec center fin c4" data-i="5"><div class="num">∞</div><div class="inner">
-    <div class="tag">Chapter 05 — Arrival</div>
-    <h2 class="sm" data-f="YOU HAVE ARRIVED">YOU HAVE ARRIVED</h2>
-    <p class="lede">Nothing was lost. It's only somewhere you can't see. From out here the thing you fell into is <b>almost beautiful</b>.</p>
+    <div class="tag">05 / Outside</div>
+    <h2 class="sm" data-f="THE VIEW FROM OUTSIDE">THE VIEW FROM OUTSIDE</h2>
+    <p class="lede">You got back out. From this far away, the thing you just fell into looks <b>almost gentle</b>. Scroll up to go again, or press the button.</p>
     <button class="btn" id="again" data-hover>Fall again <span style="font-size:16px;letter-spacing:0">↑</span></button>
-    <p class="credit">Made in a single .html file · ~1,000 lines of math and stubbornness</p>
+    <p class="credit">One .html file · about 1,000 lines · no libraries</p>
   </div></section>
 </div>
 <div id="spacer"></div>
 
 <div class="hud tl"><b>SINGULARITY</b></div>
-<div class="hud tc" id="chap">CH.00 — THRESHOLD</div>
+<div class="hud tc" id="chap">00 / THRESHOLD</div>
 <button class="snd" id="snd" data-hover aria-label="Toggle sound"><span class="eq"><i></i><i></i><i></i><i></i><i></i></span><span class="t" id="sndT">Sound off</span></button>
 <div class="hud bl">
   <div>Velocity <span id="tV">0.000 c</span></div>
   <div>Time dilation <span id="tD">×1.00</span></div>
   <div>Depth <span id="tL">0 ly</span></div>
 </div>
-<div class="hud br">Click — ripple spacetime<br>Move — look around</div>
+<div class="hud br">Click: ripple spacetime<br>Move: look around</div>
 <nav class="dots" id="dots"></nav>
 <div class="bar" id="bar"></div>
 
 <div id="gate">
   <div class="k">// event horizon protocol</div>
-  <h1>Ready to<br>fall?</h1>
-  <p>A journey through a black hole, a fractal, and whatever comes after — rendered live on your GPU. Headphones recommended. Scroll, swipe, or use ↑ ↓.</p>
+  <h1>Four worlds.<br>One scroll.</h1>
+  <p>A black hole, a fractal and a room made of mirrors, all computed live on your GPU. Nothing here is a video. Headphones make it better. Scroll, swipe, or use the arrow keys.</p>
   <div class="row">
     <button class="btn pri" id="goSound" data-hover>Enter · with sound</button>
     <button class="btn" id="goSilent" data-hover>Enter · silent</button>
@@ -537,7 +537,7 @@ function makeProgram(fs){
 }
 let P1, P2;
 try { P1 = makeProgram(FS_SCENE); P2 = makeProgram(FS_POST); }
-catch (e) { $('#fail').style.display = 'flex'; $('#fail div').innerHTML += '<br><br><small>shader compile failed — see console</small>'; return; }
+catch (e) { $('#fail').style.display = 'flex'; $('#fail div').innerHTML += '<br><br><small>shader compile failed, see console</small>'; return; }
 
 let rt = { tex:null, fbo:null, w:0, h:0 };
 function makeRT(w, h){
@@ -565,7 +565,7 @@ const world = $('#world'), spacer = $('#spacer');
 const secs = [...document.querySelectorAll('.sec')];
 let W = innerWidth, H = innerHeight, DPR = Math.min(devicePixelRatio || 1, 2), q = .8;
 let started = false, startT = 0;
-const NAMES = ['THRESHOLD','DRIFT','HORIZON','FOLD','ECHO','ARRIVAL'];
+const NAMES = ['THRESHOLD','DRIFT','HORIZON','FOLD','ECHO','OUTSIDE'];
 
 function resize(){
   W = innerWidth; H = innerHeight; DPR = Math.min(devicePixelRatio || 1, 2);
@@ -813,7 +813,7 @@ function setChapter(i){
   if (i === activeCh) return;
   activeCh = i;
   [...dots.children].forEach((d, k) => d.classList.toggle('on', k === i));
-  scramble(chapEl, 'CH.0' + i + ' — ' + NAMES[i], 700);
+  scramble(chapEl, '0' + i + ' / ' + NAMES[i], 700);
   const h = secs[i] && secs[i].querySelector('h2');
   if (h) scramble(h, h.dataset.f, 900);
 }
@@ -843,7 +843,7 @@ addEventListener('resize', () => {
   lastW = innerWidth; lastH = innerHeight; resize();
 });
 scrollTo(0, 0);
-$('#load').textContent = 'GRAVITY CALIBRATED — READY';
+$('#load').textContent = 'GRAVITY CALIBRATED: READY';
 
 let last = performance.now()/1000, T = 0, sm = 0, prevSm = 0, sVel = 0, travel = 0, stretch = 1, fade = 0;
 let frameAcc = 0, frameN = 0, cool = 0;
